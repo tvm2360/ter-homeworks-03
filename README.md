@@ -16,3 +16,10 @@
     <td><img src="./pictures/1_SG_2_out.png" width=890 height=270></td>
   </tr>
  </table>
+
+## Задание 2
+
+![Terraform_apply](./pictures/2_Terraform_apply.png)
+
+![VM](./pictures/2_VM.png)
+
