@@ -33,7 +33,7 @@ resource "yandex_compute_instance" "storage" {
   allow_stopping_for_update = var.storage_stopping_for_update
   metadata = {
     serial-port-enable = var.storage_serial_port_enable
-    ssh-keys           = "ubuntu:${local.ssh_pub_key}"
+    ssh-keys           = "${var.default_user}:${local.ssh_pub_key}"
   }
   dynamic "secondary_disk" {
     for_each = yandex_compute_disk.volume

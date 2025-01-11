@@ -26,6 +26,6 @@ resource "yandex_compute_instance" "database" {
   allow_stopping_for_update = each.value.stopping_for_update
   metadata = {
     serial-port-enable = each.value.serial_port_enable
-    ssh-keys           = "ubuntu:${local.ssh_pub_key}"
+    ssh-keys           = "${var.default_user}:${local.ssh_pub_key}"
   }
 }

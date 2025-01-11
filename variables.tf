@@ -19,6 +19,7 @@ variable "default_zone" {
   default     = "ru-central1-a"
   description = "https://cloud.yandex.ru/docs/overview/concepts/geo-scope"
 }
+
 variable "default_cidr" {
   type        = list(string)
   default     = ["10.0.1.0/24"]
@@ -35,4 +36,10 @@ variable "family" {
   type        = string
   default     = "ubuntu-2004-lts"
   description = "OS family"
+}
+
+variable "default_user" {
+  type        = string
+  default     = "dummy"
+  description = "Default user via ssh"
 }
