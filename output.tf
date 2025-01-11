@@ -22,3 +22,7 @@ output "name_database-2" {
 output "ip_database-2" {
   value = length(yandex_compute_instance.database) > 1 ? yandex_compute_instance.database["replica"].network_interface.0.nat_ip_address : null
 }
+output "ip_storage" {
+  value = yandex_compute_instance.storage.network_interface.0.nat_ip_address
+}
+

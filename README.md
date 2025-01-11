@@ -23,3 +23,11 @@
 
 ![VM](./pictures/2_VM.png)
 
+![VM_depends_on](./pictures/2_Depends_on.png)
+
+## Задание 3
+
+![VM_with_SecondDiscs](./pictures/3_VM_with_SecondDiscs.png)
+
+
+
