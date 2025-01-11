@@ -31,6 +31,6 @@ resource "yandex_compute_instance" "platform" {
   allow_stopping_for_update = var.vm_stopping_for_update
   metadata = {
     serial-port-enable = var.vm_serial_port_enable
-    ssh-keys           = local.ssh_pub_key
+    ssh-keys           = "ubuntu:${local.ssh_pub_key}"
   }
 }
