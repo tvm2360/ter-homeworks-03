@@ -29,5 +29,9 @@
 
 ![VM_with_SecondDiscs](./pictures/3_VM_with_SecondDiscs.png)
 
+## Задание 4
+
+![hosts.conf](./pictures/4_cat_hosts_conf.png)
+
 
 
