@@ -1,27 +1,8 @@
-output "name_web-1" {
-  value = length(yandex_compute_instance.platform) > 0 ? yandex_compute_instance.platform[0].name : null
+output "all" {
+  value = concat(
+    [for k, v in yandex_compute_instance.platform : format("{%#v = '%s'\n %#v = '%s'\n %#v = '%s'},", "name", v.name, "id", v.id, "fqdn", v.fqdn)],
+    [for k, v in yandex_compute_instance.database : format("{%#v = '%s'\n %#v = '%s'\n %#v = '%s'},", "name", v.name, "id", v.id, "fqdn", v.fqdn)],
+    [format("{%#v = '%s'\n %#v = '%s'\n %#v = '%s'},", "name", yandex_compute_instance.storage.name, "id", yandex_compute_instance.storage.id, "fqdn", yandex_compute_instance.storage.fqdn)]
+  )
 }
-output "ip_web-1" {
-  value = length(yandex_compute_instance.platform) > 0 ? yandex_compute_instance.platform[0].network_interface.0.nat_ip_address : null
-}
-output "name_web-2" {
-  value = length(yandex_compute_instance.platform) > 1 ? yandex_compute_instance.platform[1].name : null
-}
-output "ip_web-2" {
-  value = length(yandex_compute_instance.platform) > 1 ? yandex_compute_instance.platform[1].network_interface.0.nat_ip_address : null
-}
-output "name_database-1" {
-  value = length(yandex_compute_instance.database) > 0 ? yandex_compute_instance.database["main"].name : null
-}
-output "ip_database-1" {
-  value = length(yandex_compute_instance.database) > 0 ? yandex_compute_instance.database["main"].network_interface.0.nat_ip_address : null
-}
-output "name_database-2" {
-  value = length(yandex_compute_instance.database) > 1 ? yandex_compute_instance.database["replica"].name : null
-}
-output "ip_database-2" {
-  value = length(yandex_compute_instance.database) > 1 ? yandex_compute_instance.database["replica"].network_interface.0.nat_ip_address : null
-}
-output "ip_storage" {
-  value = yandex_compute_instance.storage.network_interface.0.nat_ip_address
-}
+

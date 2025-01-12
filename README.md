@@ -35,5 +35,9 @@
 
 ![hosts.conf](./pictures/4_cat_hosts_conf.png)
 
+## Задание 5
+
+![Terraform_output](./pictures/5_Terraform_output.png)
+
 
 
