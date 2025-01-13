@@ -80,3 +80,18 @@ terraform output:
 ![NAT_is_false](./pictures/6_NAT_is_false.png)
 
 ![NAT_off](./pictures/6_NAT_off.png)
+
+## Задание 7
+
+...
+
+## Задание 8
+
+![Error](./pictures/8_Error.png)
+
+1. Фигурная скобка, закрывающая выражение ansible_host=${i["network_interface"][0]["nat_ip_address"] ошибочно смещена в конец строки
+2. Опечатка в наименовании индекса ["platform_id "] для i. Лишний пробел.
+
+## Задание 9
+
+...
