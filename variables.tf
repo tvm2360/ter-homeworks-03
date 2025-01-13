@@ -43,3 +43,9 @@ variable "default_user" {
   default     = "dummy"
   description = "Default user via ssh"
 }
+
+variable "web_provision" {
+  type        = bool
+  default     = true
+  description = "ansible provision switch variable"
+}

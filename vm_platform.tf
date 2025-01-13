@@ -48,8 +48,8 @@ variable "vm_stopping_for_update" {
 
 variable "vm_serial_port_enable" {
   type        = number
-  default     = 0
-  description = "Serial port is not enable"
+  default     = 1
+  description = "Serial port is enable"
 }
 
 variable "vm_hdd_type" {

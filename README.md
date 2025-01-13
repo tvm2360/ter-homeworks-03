@@ -39,5 +39,18 @@
 
 ![Terraform_output](./pictures/5_Terraform_output.png)
 
+## Задание 6
 
+6.1.:
 
+![Ansible](./pictures/6_Ansible.png)
+
+6.2.:
+
+![NAT_is_true](./pictures/6_NAT_is_true.png)
+
+![NAT_on](./pictures/6_NAT_on.png)
+
+![NAT_is_false](./pictures/6_NAT_is_false.png)
+
+![NAT_off](./pictures/6_NAT_off.png)
