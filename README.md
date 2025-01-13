@@ -105,4 +105,8 @@ terraform output:
 
 ## Задание 9
 
-...
+9.1. Terraform console:
+
+```
+[ for i in range(1,100): i < 10 ? "rc0${i}" : "rc${i}" ]
+```
