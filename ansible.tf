@@ -11,7 +11,7 @@ resource "null_resource" "web_hosts_provision" {
   depends_on = [yandex_compute_instance.platform, yandex_compute_instance.database]
 
   provisioner "local-exec" {
-    command    = "> ~/.ssh/known_hosts && eval $(ssh-agent) && cat ~/.ssh/id_yc_ed25519 | ssh-add -"
+    command    = ">> ~/.ssh/known_hosts && eval $(ssh-agent) && cat ~/.ssh/id_yc_ed25519 | ssh-add -"
     on_failure = continue
 
   }
