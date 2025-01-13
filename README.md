@@ -63,7 +63,7 @@ output "all_inst" {
 
 terraform output:
 
-![Terraform_output](./pictures/5_Terraform_output.png)
+![Terraform_output_all_inst](./pictures/5_Terraform_output_all_inst.png)
 
 ## Задание 6
 
