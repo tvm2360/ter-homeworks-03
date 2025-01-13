@@ -83,7 +83,18 @@ terraform output:
 
 ## Задание 7
 
-...
+В terraform console:
+
+```
+{ network_id = local.vpc.network_id, 
+  subnet_ids = [for i in local.vpc.subnet_ids : i if i != local.vpc.subnet_ids[2]],
+  subnet_zones = [for i in local.vpc.subnet_zones : i if i != local.vpc.subnet_zones[2]] 
+}
+```
+
+Результат:
+
+![Terraform_console](./pictures/7_Terraform_console.png)
 
 ## Задание 8
 
